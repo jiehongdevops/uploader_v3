@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Uploader</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Bulk Photo Upload</h1>
+        <p class="hint">Drop files here or click to pick multiple files.</p>
+        <label class="dropzone" for="file-input">
+          <input id="file-input" type="file" multiple accept="image/*">
+          <span>Select Photos</span>
+        </label>
+        <div class="actions">
+          <button id="start-btn" type="button">Start Upload</button>
+          <button id="clear-btn" type="button" class="ghost">Clear List</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="list-header">
+          <h2>Queue</h2>
+          <span id="queue-count">0 files</span>
+        </div>
+        <ul id="file-list" class="file-list"></ul>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
